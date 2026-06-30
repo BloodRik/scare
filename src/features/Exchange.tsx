@@ -103,21 +103,23 @@ export const Exchange: React.FC = () => {
               </span>
             </div>
             
-            <div className="flex space-x-3">
-              <input
-                type="number"
-                required
-                min="0.000001"
-                step="any"
-                value={fromAmount}
-                onChange={(e) => setFromAmount(e.target.value)}
-                className="flex-1 bg-transparent border-none text-xl font-sans font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-0 p-0"
-                placeholder="0.00"
-              />
+            <div className="flex items-center space-x-3">
+              <div className="flex-1 min-w-0">
+                <input
+                  type="number"
+                  required
+                  min="0.000001"
+                  step="any"
+                  value={fromAmount}
+                  onChange={(e) => setFromAmount(e.target.value)}
+                  className="w-full bg-transparent border-none text-xl font-sans font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-0 p-0"
+                  placeholder="0.00"
+                />
+              </div>
               <select
                 value={fromCurr}
                 onChange={(e) => setFromCurr(e.target.value as CurrencyType)}
-                className="bg-white dark:bg-[#1E2533] border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-sm font-bold focus:outline-none"
+                className="shrink-0 bg-white dark:bg-[#1E2533] border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-sm font-bold focus:outline-none text-slate-800 dark:text-slate-200 cursor-pointer"
               >
                 {['UAH', 'USD', 'EUR', 'USDT', 'BTC', 'ETH'].map(c => (
                   <option key={c} value={c}>{c}</option>
@@ -127,16 +129,16 @@ export const Exchange: React.FC = () => {
           </div>
 
           {/* SWAP ROW */}
-          <div className="flex justify-center relative -my-2.5 z-10">
+          <div className="flex justify-center relative -mt-4.5 mb-1.5 sm:-my-2.5 z-10">
             <motion.button
               type="button"
               whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.3 }}
               onClick={handleSwapCurrencies}
-              className="p-3 rounded-full bg-[#234CFF] text-white shadow-lg active:scale-95 transition-all cursor-pointer"
+              className="p-2.5 sm:p-3 rounded-full bg-[#234CFF] text-white shadow-lg active:scale-95 transition-all cursor-pointer"
             >
-              <ArrowDownUp className="w-5 h-5" />
+              <ArrowDownUp className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
             </motion.button>
           </div>
 
@@ -152,14 +154,14 @@ export const Exchange: React.FC = () => {
               </span>
             </div>
 
-            <div className="flex space-x-3">
+            <div className="flex items-center space-x-3">
               <div className="flex-1 text-xl font-sans font-bold text-slate-400 select-all dark:text-slate-300">
                 {calculateToAmount()}
               </div>
               <select
                 value={toCurr}
                 onChange={(e) => setToCurr(e.target.value as CurrencyType)}
-                className="bg-white dark:bg-[#1E2533] border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-sm font-bold focus:outline-none"
+                className="shrink-0 bg-white dark:bg-[#1E2533] border border-slate-200 dark:border-white/10 rounded-xl px-3 py-1.5 text-sm font-bold focus:outline-none text-slate-800 dark:text-slate-200 cursor-pointer"
               >
                 {['UAH', 'USD', 'EUR', 'USDT', 'BTC', 'ETH'].filter(c => c !== fromCurr).map(c => (
                   <option key={c} value={c}>{c}</option>

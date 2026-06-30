@@ -1,10 +1,10 @@
 import { WalletAccount, CryptoAsset, CreditCard, Transaction, AppNotification } from '../types';
-import userJpg from '../../user.jpg';
+import userJpg from '../../user.png';
 
 export const mockUser = {
   username: "jora228",
-  name: "Эрибас Петренко",
-  avatar: userJpg, // Imported user.jpg
+  name: "Іван Петренко",
+  avatar: userJpg, // Imported user.png
   phone: "+380 97 123 45 67",
   email: "ivan.petrenko@scarb.ua",
   isFop: true,
@@ -79,7 +79,7 @@ export const mockCards: CreditCard[] = [
 ];
 
 export const mockNotifications: AppNotification[] = [
-  { id: 'nt-1', type: 'success', title: 'Отримано P2P переказ', body: 'Эрибас Петренко надіслав вам +1 200.00 ₴', time: 'Сьогодні, 11:30', read: false },
+  { id: 'nt-1', type: 'success', title: 'Отримано P2P переказ', body: 'Іван Петренко надіслав вам +1 200.00 ₴', time: 'Сьогодні, 11:30', read: false },
   { id: 'nt-2', type: 'info', title: 'Обмін валюти', body: 'Ви успішно обміняли USDT на UAH на суму +2 300.00 ₴', time: 'Вчора, 16:20', read: false },
   { id: 'nt-3', type: 'warning', title: 'Оплата комунальних послуг', body: 'Знято -620.00 ₴ за Київенерго', time: 'Вчора, 18:40', read: true },
   { id: 'nt-4', type: 'success', title: 'Нарахування відсотків', body: 'Ваш крипто-портфель зріс на +2.45% за останню добу', time: '28 Червня, 12:00', read: true },
@@ -87,7 +87,7 @@ export const mockNotifications: AppNotification[] = [
 ];
 
 export const mockTransactions: Transaction[] = [
-  { id: 'tx-1', type: 'income', title: 'Від: Эрибас Петренко', category: 'P2P переказ', amount: 1200.00, currency: 'UAH', date: 'Сьогодні, 11:30', status: 'completed', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80', senderName: 'Эрибас Петренко' },
+  { id: 'tx-1', type: 'income', title: 'Від: Іван Петренко', category: 'P2P переказ', amount: 1200.00, currency: 'UAH', date: 'Сьогодні, 11:30', status: 'completed', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80', senderName: 'Іван Петренко' },
   { id: 'tx-2', type: 'expense', title: 'Rozetka', category: 'Покупка', amount: 850.00, currency: 'UAH', date: 'Сьогодні, 10:15', status: 'completed' },
   { id: 'tx-3', type: 'expense', title: 'Київенерго', category: 'Комунальні послуги', amount: 620.00, currency: 'UAH', date: 'Вчора, 18:40', status: 'completed' },
   { id: 'tx-4', type: 'exchange', title: 'USDT → UAH', category: 'Обмін криптовалюти', amount: 2300.00, currency: 'UAH', date: 'Вчора, 16:20', status: 'completed' },

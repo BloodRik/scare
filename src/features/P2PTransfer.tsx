@@ -27,13 +27,13 @@ export const P2PTransfer: React.FC = () => {
   // Mock matching user for demo
   const getMockRecipient = () => {
     if (tab === 'username' && recipient.toLowerCase().includes('jora')) {
-      return { name: 'Эрибас Петренко', info: '@jora228', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80' };
+      return { name: 'Іван Петренко', info: '@jora228', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80' };
     }
     if (tab === 'phone' && recipient.length >= 7) {
-      return { name: 'Эрибас Петренко', info: '+380 97 123 45 67', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80' };
+      return { name: 'Іван Петренко', info: '+380 97 123 45 67', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80' };
     }
     if (tab === 'card' && recipient.replace(/\s/g, '').length >= 16) {
-      return { name: 'Эрибас Петренко', info: 'VISA •••• 5678', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80' };
+      return { name: 'Іван Петренко', info: 'VISA •••• 5678', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80' };
     }
     return null;
   };

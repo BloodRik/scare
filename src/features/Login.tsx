@@ -76,7 +76,7 @@ export const Login: React.FC = () => {
               <User className="absolute left-4.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400" />
               <input
                 type="text" required value={username} onChange={(e) => setUsername(e.target.value)}
-                className="w-full pl-12 pr-4 py-3.5 bg-white dark:bg-[#161B26] border border-slate-200/50 dark:border-white/5 rounded-[18px] text-xs font-semibold focus:outline-none focus:border-[#234CFF]"
+                className="w-full pl-12 pr-4 py-3.5 bg-white dark:bg-[#161B26] border border-slate-200/50 dark:border-white/5 rounded-[18px] text-xs font-semibold focus:outline-none focus:border-[#234CFF] text-slate-400 dark:text-slate-300"
                 placeholder="Enter login username"
               />
             </div>
@@ -89,7 +89,7 @@ export const Login: React.FC = () => {
               <KeyRound className="absolute left-4.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400" />
               <input
                 type={showPassword ? 'text' : 'password'} required value={password} onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-12 pr-12 py-3.5 bg-white dark:bg-[#161B26] border border-slate-200/50 dark:border-white/5 rounded-[18px] text-xs font-mono focus:outline-none focus:border-[#234CFF]"
+                className="w-full pl-12 pr-12 py-3.5 bg-white dark:bg-[#161B26] border border-slate-200/50 dark:border-white/5 rounded-[18px] text-xs font-mono focus:outline-none focus:border-[#234CFF] text-slate-400 dark:text-slate-300"
                 placeholder="Enter account security key"
               />
               <button

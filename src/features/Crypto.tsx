@@ -109,10 +109,12 @@ export const Crypto: React.FC = () => {
             <button
               key={btn.id}
               onClick={() => setShowTradeModal(btn.id as any)}
-              className="py-2.5 rounded-xl bg-white/5 hover:bg-white/10 active:scale-95 transition-all text-center flex flex-col items-center space-y-1 text-xs font-bold text-slate-200"
+              className="py-2.5 px-0.5 sm:px-2 rounded-xl bg-white/5 hover:bg-white/10 active:scale-95 transition-all text-center flex flex-col items-center justify-center space-y-1 text-[10px] sm:text-xs font-bold text-slate-200 min-w-0"
             >
-              {btn.icon}
-              <span>{btn.label}</span>
+              <span className="shrink-0">{btn.icon}</span>
+              <span className="w-full text-center truncate px-0.5" title={btn.label}>
+                {btn.label}
+              </span>
             </button>
           ))}
         </div>
