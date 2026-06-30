@@ -1,11 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Mobile Banden Service | 24/7 Mobiele Bandenservice & Pechhulp België</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Premium 24/7 mobiele bandenservice in heel België. Wij komen naar u toe voor bandenwissel op locatie, reparatie van lekke banden en balanceren. Snel ter plaatse binnen 30-60 minuten." />
+    <meta name="keywords" content="mobile banden service, mobiele bandenservice, bandenwissel op locatie, pechverhelping, lekke band, autobanden belgië, vlaanderen, bandenmontage thuis, autoband repareren" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mobilebandenservice.be" />
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mobile Banden Service | 24/7 Mobiele Bandenservice & Pechhulp" />
+    <meta property="og:description" content="Premium mobiele bandenservice in België. Bandenwissel ter plaatse, uitbalanceren en herstelling van lekke banden. Dag en nacht bereikbaar!" />
+    <meta property="og:image" content="/fone.png" />
+    <meta property="og:url" content="https://mobilebandenservice.be" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mobile Banden Service | 24/7 Mobiele Bandenservice" />
+    <meta name="twitter:description" content="Wij komen naar u toe! 24/7 pechhulp voor banden in heel België. Binnen 30-60 min ter plaatse." />
+    <meta name="twitter:image" content="/fone.png" />
+
+    <!-- Leaflet Map CSS stylesheet (imported in index.css) -->
+
+    <!-- Google Fonts for premium design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org LocalBusiness structured markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Mobile Banden Service",
+        "image": "https://mobilebandenservice.be/logo.png",
+        "@id": "https://mobilebandenservice.be/#localbusiness",
+        "url": "https://mobilebandenservice.be",
+        "telephone": "+32479409929",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "",
+          "addressLocality": "Antwerp",
+          "addressRegion": "Flanders",
+          "postalCode": "",
+          "addressCountry": "BE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.2194,
+          "longitude": 4.4025
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://www.facebook.com/MobileBandenService",
+          "https://www.instagram.com/MobileBandenService"
+        ],
+        "areaServed": "Belgium"
+      }
+    </script>
+
   </head>
-  <body>
+  <body class="bg-black text-white selection:bg-[#d4af37] selection:text-black antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

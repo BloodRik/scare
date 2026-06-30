@@ -1,6 +1,6 @@
 {
-  "name": "SCARB",
-  "description": "Digital Banking for Ukraine and the World",
-  "requestFramePermissions": [],
+  "name": "Mobile Banden Service",
+  "description": "24/7 Mobile Tire Service in Belgium. Premium on-site tire replacement, balancing, and emergency puncture repair.",
+  "requestFramePermissions": ["geolocation"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -1,14 +1,82 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
-@variant dark (&:where(.dark, .dark *));
-
-/* Hide scrollbar globally for a clean mobile app-like aesthetic */
-* {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-}
-*::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+  }
 
+  /* Hide scrollbar on mobile devices, show custom styles only on desktop */
+  @media (max-width: 767px) {
+    ::-webkit-scrollbar {
+      display: none;
+      width: 0 !important;
+      height: 0 !important;
+    }
+    html, body {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  }
+
+  @media (min-width: 768px) {
+    /* Premium scrollbar styling for Chrome/Safari/Firefox on desktop */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e1e1e;
+      border-radius: 4px;
+      border: 1px solid #111;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom override for Leaflet dark mode layout */
+.leaflet-container {
+  background: #0a0a0a !important;
+}
+
+/* Custom styles for Leaflet popups to make them look high class */
+.premium-map-popup .leaflet-popup-content-wrapper {
+  background: #111111 !important;
+  border: 1px solid #d4af37 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7) !important;
+  padding: 0 !important;
+}
+
+.premium-map-popup .leaflet-popup-content {
+  margin: 0 !important;
+  padding: 4px 8px !important;
+}
+
+.premium-map-popup .leaflet-popup-tip {
+  background: #111111 !important;
+  border-left: 1px solid #d4af37 !important;
+  border-bottom: 1px solid #d4af37 !important;
+}
+
+/* Custom animation overrides for Leaflet */
+.custom-leaflet-marker {
+  overflow: visible !important;
+}
